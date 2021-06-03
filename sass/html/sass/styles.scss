@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+p{
+	font-size: $fontSize;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+nav{
+	background-color: gray;
+	padding: 8px 10px;
+	ul{
+		list-style-type: none;
+		li{
+			display: inline-block;
+			margin-right: 3px * 10;
+			a{
+				text-decoration: none;
+				color: white;
+				padding: 8px 10px;
+				&:hover{
+				  background-color: black;	
+				}
+			}
+		}
+	}
+}
+
+div{
+	p{
+		@include addColor;
+		@include box-shadow(1px 1px 10px 1px red);
+	}
+	h1{
+	  background-color: pink;
+		@include box-shadow(1px 1px 5px 2px orange);
+	}
+}
+
+
+
+p{
+	color: blue;
+	font-size: 30px;
+	font-family: cursive;
+	line-height: 36px;
+	background-color: cyan;
+}
+
+article{
+	@extend p;
+}
